@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Hal Ehwal Murid - SK Pasir Putih Sandakan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            font-size: 18px;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .tab-content {
+            padding: 20px;
+            display: none;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .tab-content.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Unit Hal Ehwal Murid</h1>
+    <p>"Membentuk Sahsiah, Menjana Kecemerlangan"</p>
+</header>
+
+<nav>
+    <a href="#" class="tab-link" data-tab="tab1">Maklumat Am</a>
+    <a href="#" class="tab-link" data-tab="tab2">Aktiviti</a>
+    <a href="#" class="tab-link" data-tab="tab3">Galeri</a>
+    <a href="#" class="tab-link" data-tab="tab4">Hubungi Kami</a>
+</nav>
+
+<div id="tab1" class="tab-content active">
+    <h2>Maklumat Am</h2>
+    <p>Unit Hal Ehwal Murid di Sekolah Kebangsaan Pasir Putih Sandakan bertanggungjawab mengurus pelbagai aspek kebajikan, disiplin, dan sahsiah pelajar. Kami komited untuk memastikan pembangunan sahsiah pelajar dan kejayaan akademik berjalan selari.</p>
+</div>
+
+<div id="tab2" class="tab-content">
+    <h2>Aktiviti</h2>
+    <p>Unit ini menganjurkan pelbagai program dan aktiviti seperti ceramah motivasi, kem sahsiah, gotong-royong, dan pelbagai lagi aktiviti pembangunan pelajar sepanjang tahun.</p>
+</div>
+
+<div id="tab3" class="tab-content">
+    <h2>Galeri</h2>
+    <p>Lihat gambar-gambar aktiviti kami di galeri ini. Kami sentiasa aktif dalam menjayakan program-program yang bermanfaat untuk pelajar.</p>
+    <img src="https://via.placeholder.com/400x200" alt="Aktiviti 1">
+    <img src="https://via.placeholder.com/400x200" alt="Aktiviti 2">
+</div>
+
+<div id="tab4" class="tab-content">
+    <h2>Hubungi Kami</h2>
+    <p>Anda boleh hubungi Unit Hal Ehwal Murid di Sekolah Kebangsaan Pasir Putih Sandakan melalui:</p>
+    <ul>
+        <li>Telefon: 012-3456789</li>
+        <li>Email: uhem_skp_pasirputih@example.com</li>
+        <li>Alamat: Jalan Pasir Putih, 90000 Sandakan, Sabah</li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 Unit Hal Ehwal Murid, SK Pasir Putih Sandakan</p>
+</footer>
+
+<script>
+    // JavaScript untuk mengawal tab
+    document.querySelectorAll('.tab-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Buang class active dari semua tab
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Tambah class active pada tab yang diklik
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
